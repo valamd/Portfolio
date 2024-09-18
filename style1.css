@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary-color:blue;
+    --secondary-color: #fff;
+}
+
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+.header.nav{
+    flex:1;
+    text-align: right;
+
+}
+
+
+body{
+    background: #0c1022;
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+
+
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a.active,
+.navbar.a:hover{
+    background: linear-gradient(45deg,#f06,#3cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+
+.home-content p{
+    font-size: 16px;
+   
+    
+}
+
+.btn{
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    display: inline-flex;
+    width: 180px;
+    height: 48px;
+    background: yellowgreen;
+    border-radius: 40px;
+    font-size: 29px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+    background-position: 0 0;
+   z-index: -1;
+   border-radius: 40px;
+   background-size: 200%;
+   filter:blur(5px);
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+   z-index: -1;
+   background-position: 0 0;
+   border-radius: 40px;
+   background-size: 200%;
+   transition: .5s ease;
+}
+
+.btn:hover::after{
+    background-position: 100% 0;
+}
+
+.home-sci a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 0;
+    z-index: 1;
+    transition: .5s ease;
+}
+
+.home-sci a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0c1022;
+    border-radius: 50%;
+    transform: scale(.88);
+    z-index: -1;
+    transition: .5s ease;
+
+}
+.home-sci a:hover::after{
+    transform: scale(0);
+
+}
+.home-img{
+    width:380px;
+    height: 380px;
+   
+}
+
+.home-img .glowing-circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .glowing-circle::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #0c1022;
+    border-radius: 50%;
+}
+
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background: red;
+    border-radius:50% ;
+    z-index:1;
+    overflow: hidden;
+}
+.glowing-circle span{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(#f06,#3cf);
+    border-radius: 50%;
+}
+
+.image img{
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    transform: translateX(-40);
+    max-width: 380px;
+    object-fit: cover;
+}
+.btn{
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    display: inline-flex;
+    width: 180px;
+    height: 48px;
+    background: yellowgreen;
+    border-radius: 40px;
+    font-size: 29px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.hello::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+    background-position: 0 0;
+   z-index: -1;
+   border-radius: 40px;
+   background-size: 200%;
+   filter:blur(5px);
+}
+.hello::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg,#f06,#3cf,#f06);
+   z-index: -1;
+   background-position: 0 0;
+   border-radius: 40px;
+   background-size: 200%;
+   transition: .5s ease;
+}
+
+.hello:hover::after{
+    background-position: 100% 0;
+}
+
+B  margin-bottom: 100px;
+}
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #478eb8;
+}
+.dark-theme{
+    --primary-color:#0e0c36;
+    --secondary-color:#ffffff;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 0;
+    background: var(--primary-color);
+} 
+.images{
+    width: 40vh;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    border-radius: 20px;
+    position: relative;
+    float: right;    
+}
+
+.Profile {
+    background-color: var(--secondary-color);
+    opacity: 0.7;
+    background-attachment: fixed;
+    border-radius: 30px;
+    padding: 0px 40px 50px 30px;
+    margin: 0px 40px 40px 40px;
+    width: 80vh;
+}
+@media screen and (max-width: 428px) {
+
+    .menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+    0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .menu.active {
+    left: 0;
+    }
+    .nav-item {
+    margin: 2.5rem 0;
+    }
+    .hamburger {
+   HARDWAR WORKSHOP
+   Name : Vansh Chetanbhai Rathod
+   Roll no : CE110
+   ID : 22CEUTG077
+    display: block;
+    cursor: pointer;
+    margin-left: 0px;
+    }
+    .images{
+    width: 20vh;
+    height: 50%;
+    position: absolute;
+    }
+    .images img{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 800px;
+    }
+    .myslider{
+    height: 480px;
+    }
+    .slider{
+    width: 90%;
+    }
+    .Profile{
+    width: 30vh;
+    }
+    .content{
+    padding-top: 80px;
+    text-align: left;
+    }
+    .content h2{
+    text-align: left;
+    font-size: 150%;
+    }
+    .content h1{
+    font-size: 300%;
+    }
+    .prev, .next{
+    position: absolute;
+    top: 55%;
+    font-size: 50px;
+    padding: 15px;
+    }
+    .prev{
+    left: 0;
+    margin-left: 30px;
+    }
+    .next{
+    right: 0;
+    margin-right: 30px;
+    }
+    /* footer */
+   .footer{
+    width: 90%;
+    margin: 20px;
+    margin-top: 300px;
+    text-align: center;
+    bottom: 0;
+   }
+    .social{
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   .social a{
+    font-size: 30px;
+    margin-right: 20px;
+   }
+   /* footer */
+    }
+   /* hamburger */
+    /* temp */
+    @media screen and (max-width: 768px) {
+    .menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 100%;
+    z-index: 99;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+    0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .menu.active {
+    left: 0;
+    }
+    .nav-item {
+    margin: 2.5rem 0;
+    }
+    .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-left: 220px;
+    }
+   
+    .header li {
+    float: left;
+    }
+    .header li a {
+    padding: 20px 30px;
+    }
+    .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    }
+    .header .menu-icon {
+    display: none;
+    }
+   
+   
+    .header{
+    padding: 0px 50px 30px 00px;
+    }
+    .images{
+    width: 20vh;
+    height: 50%;
+    position: absolute;
+    }
+    .images img{
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 800px;
+    }
+    .myslider{
+    padding: 0px 0px 20px 10px;
+    height: 500px;
+    }
+    .slider{
+    width: 100%;
+    }
+    .Profile{
+    padding: 0px 20px 0px 1px;
+    margin: 20px 0px 0px 20px;
+    width: 40vh;
+    }
+    .content{
+    padding-top: 80px;
+    text-align: left;
+    }
+    .content h2{
+    text-align: left;
+    font-size: 150%;
+    }
+    .content h1{
+    font-size: 300%;
+    }
+    /* footer */
+   .footer{
+    width: 90%;
+    margin: 20px;
+    margin-top: 300px;
+    text-align: center;
+    bottom: 0;
+   }
+    .social{
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   .social a{
+    font-size: 30px;
+    margin-right: 20px;
+   }
+   /* footer */
+    }
+   
+   
+    @media screen and (max-width: 1314px) {
+    .images img{
+    margin-top: 458px;
+    }
+    .footer{
+    margin-top: 600px;
+    }
+    }
+    @media screen and (max-width: 767px) {
+    .footer{
+    margin-top: 300px;
+    }
+    }
+    @media screen and (min-width: 775px) {
+    .prev, .next{
+    position: absolute;
+    top: 55%;
+    }
+    .next{
+    left: 0;
+    margin-left: 740px;
+    }
+    }
+    @media screen and (max-width: 785px) {
+    .prev, .next{
+    position: absolute;
+    top: 55%;
+    }
+    .next{
+    left: 0;
+    margin-left: 300px;
+    }
+    }
+    @media screen and (min-width: 769px) {
+    .prev, .next{
+    position: absolute;
+    top: 55%;
+    }
+    .next{
+    left: 0;
+    margin-left: 630px;
+    }
+    }
+    @media screen and (max-width: 377px) {
+   
+    .footer p{
+    font-size: small;
+   
+    }
+    .myslider{
+    padding: 0px 0px 20px 10px;
+    height: 400px;
+    }
+    .slider{
+    width: 100%;
+    }
+    .content{
+    padding-top: 80px;
+    text-align: left;
+    }
+    .content h2{
+    text-align: left;
+    font-size: 120%;
+    }
+    .content h1{
+    font-size: 200%;
+    }
+    .prev, .next{
+    position: absolute;
+    top: 65%;
+    }
+    .next{
+    left: 0;
+    margin-left: 230px;
+    }
+    }
+    @media screen and (min-width: 760px) {
+    .prev, .next{
+    position: absolute;
+    top: 55%;
+    }
+    }
+   
